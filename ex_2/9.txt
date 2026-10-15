@@ -1,0 +1,5 @@
+program keeps running even after terminal is closed (unless I kill it with C-b: kill-session)
+
+to list: tmux ls
+to reattach: tmux attach -t 0 (or session name)
+

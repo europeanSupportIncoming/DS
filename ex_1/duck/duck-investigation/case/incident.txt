@@ -1,0 +1,5 @@
+INCIDENT REPORT
+
+At 09:00 the debugging duck was missing from its usual place.
+A programmer attempted to explain a bug to a stapler instead.
+The stapler offered no useful feedback.

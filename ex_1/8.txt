@@ -1,0 +1,15 @@
+download via:
+$ curl --output "duck-investigation.tar.gz" https://imsc.uni-graz.at/hackl/teaching/duck-investigation.tar.gz
+
+list via:
+$ tar -tvf duck-investigation.tar.gz
+
+extract via:
+$ tar -xf duck-investigation.tar.gz -C ./duck
+
+rezip via:
+$ tar -tvf duck-investigation-repacked.tar.gz
+
+solution:
+Dr. Honk, the departmental goose took it to explain some particularly
+tangled piece of spaghetti code.

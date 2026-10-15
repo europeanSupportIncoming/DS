@@ -1,0 +1,13 @@
+--- checklist.txt	2026-10-14 17:38:46.750298298 +0200
++++ checklist_copied.txt	2026-10-15 18:39:09.114165103 +0200
+@@ -24,8 +24,8 @@
+ 16. Point the ship away from the ground.
+ 
+ == Engines ==
+-17. Ignite the main engines.
+-18. Close the airlock.
++17. Close the airlock.
++18. Ignite the main engines.
+ 19. Make sure the engines sound roughly like last time.
+ 20. If they do not, consult the emergency manual.
+ 

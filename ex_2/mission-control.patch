@@ -1,0 +1,31 @@
+--- checklist.txt
++++ checklist.txt
+@@ -1,5 +1,5 @@
+ SS PROBABLY FINE -- PRE-LAUNCH CHECKLIST
+-Revision 7 (approved by nobody in particular)
++Revision 8 (approved by mission control)
+ 
+ == Crew ==
+  1. Count the crew. The number should be the same as yesterday.
+@@ -17,10 +17,10 @@
+ 
+ == Navigation ==
+ 11. Switch on the navigation computer.
+-12. Feed the navigation computer a snack.
++12. Do NOT feed the navigation computer. It is after midnight somewhere.
+ 13. Enter the destination: "Somewhere nice".
+ 14. Ignore the warning that "Somewhere nice" is not a real place.
+-15. Set the thrusters to 11.
++15. Set the thrusters to 10. (11 is reserved for emergencies.)
+ 16. Point the ship away from the ground.
+ 
+ == Engines ==
+@@ -30,7 +30,7 @@
+ 20. If they do not, consult the emergency manual.
+ 
+ == Launch ==
+-21. Fasten seatbelts.
++21. Fasten seatbelts. The debugging duck gets one, too.
+ 22. Count down from 10. Skipping numbers is not allowed.
+ 23. Launch.
+ 24. Wave.

@@ -1,0 +1,11 @@
+in dir, on sh:
+only lines beginning with bee:
+curl https://gist.githubusercontent.com/behackl/6620ab9cdfcef9587aed8ba605cf8e10/raw/a6afecfd6256e8778f397fe1310c39be78ace7dd/bee-movie-script.txt | grep -iwc  "^bee"
+ of which there are 5
+
+
+all lines containing bee:
+curl https://gist.githubusercontent.com/behackl/6620ab9cdfcef9587aed8ba605cf8e10/raw/a6afecfd6256e8778f397fe1310c39be78ace7dd/bee-movie-script.txt | grep -iwc  "bee"
+of which there are 89
+
+

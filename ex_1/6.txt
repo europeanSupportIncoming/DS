@@ -1,0 +1,2 @@
+as usual $ cut -d "-" -f 1 apache_logs | sort | uniq | wc -l
+shows 1753 unique IP addresses
