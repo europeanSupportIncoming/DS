@@ -1,0 +1,5 @@
+this codedefines a function :
+this function calls itself twice,
+so it grows like 2^n,
+eventually exhausting memory -> system freezes or crashes
+

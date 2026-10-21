@@ -1,0 +1,14 @@
+-- lines: removed
+++ lines: addwed
+numbers: @@x,y, @@z,a means: we started at line x, y lines in
+in the old file and are now at line z, a lines in at the new one
+
+(patch origfile newfile) -> line 21:
+fasten seatbelts- The debugging duck gets one, too.
+
+(patch again) -> Reversed (or previously applied) patch detected! Assume -R? [n]
+
+cp checklist -> switch 17/18 -> diff -u checklist copy > mypatch.patch
+cp checklist mypatch_checklist -> patch mypatch_ch mypatch.ptc
+
+

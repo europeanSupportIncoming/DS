@@ -1,0 +1,9 @@
+On ubuntu 24.04:
+-create file modified_100_yrs_ago.txt via nano
+-edit specifically modification time (flag m)
+-edit existing file (flag c, altghough just starting with tough would also work)
+-specify year format (flag t)
+
+thus in directory of file, run this in shell:
+$touch -cmt 192610071727 modified_100_yrs_ago.txt
+check via stat -c "%y% modified_100_yrs_ago.txt

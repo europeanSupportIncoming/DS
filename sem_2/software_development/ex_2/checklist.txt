@@ -1,0 +1,36 @@
+SS PROBABLY FINE -- PRE-LAUNCH CHECKLIST
+Revision 8 (approved by mission control)
+
+== Crew ==
+ 1. Count the crew. The number should be the same as yesterday.
+ 2. Count the crew again, just to be sure.
+ 3. Confirm that everyone has packed a towel.
+ 4. Wake up the navigator.
+ 5. Wake up the navigator again.
+
+== Cabin ==
+ 6. Stow all loose items, especially the cactus.
+ 7. Secure the coffee machine with at least two straps.
+ 8. Check that the oxygen gauge shows a number.
+ 9. Check that the number is not zero.
+10. Lock the snack cabinet.
+
+== Navigation ==
+11. Switch on the navigation computer.
+12. Do NOT feed the navigation computer. It is after midnight somewhere.
+13. Enter the destination: "Somewhere nice".
+14. Ignore the warning that "Somewhere nice" is not a real place.
+15. Set the thrusters to 10. (11 is reserved for emergencies.)
+16. Point the ship away from the ground.
+
+== Engines ==
+17. Ignite the main engines.
+18. Close the airlock.
+19. Make sure the engines sound roughly like last time.
+20. If they do not, consult the emergency manual.
+
+== Launch ==
+21. Fasten seatbelts. The debugging duck gets one, too.
+22. Count down from 10. Skipping numbers is not allowed.
+23. Launch.
+24. Wave.

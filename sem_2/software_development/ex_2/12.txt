@@ -1,0 +1,15 @@
+(#!/usr/bin/env bash)
+
+name="$1"
+if { -z "$name" ]; then
+	read -p "your name is?" name
+fi
+echo "hello, $name"
+
+needs chmod +x to work with ./ call
+bash works bc it doesn't need the file to be executable
+(natively uses bash env)
+
+"N1 N2" gives both names, N1 N2 only gives the first
+
+"" shows where string starts7ends ie. parses to one expression. N1 N2 are 2 inputs with the second one being ignored.

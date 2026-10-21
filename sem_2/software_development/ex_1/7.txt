@@ -1,0 +1,10 @@
+
+count:
+$ wc frankenstein.txt
+gives
+7741 (word count)   78106 (lines)   448885(characters)  frankenstein.txt
+
+
+for frankenstein lines:
+$ grep "frankenstein" -i -B 1 -A 1 frankenstein.txt 
+prints out the lines

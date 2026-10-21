@@ -1,0 +1,6 @@
+SUSPECT PROFILE
+
+Name: Professor Whiskers
+Role: Keyboard occupancy coordinator
+Speciality: Generating commits containing only the letter k
+Current project: Sleeping on the warmest laptop

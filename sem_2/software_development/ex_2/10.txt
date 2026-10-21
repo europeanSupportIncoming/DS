@@ -1,0 +1,14 @@
+(2718 g or G) -> Ken got decaf
+(/ERROR) -> milk reservoir contains orange juice. who did this?
+(?WARNING) -> descaling recommended
+(&WARNING) 3 lines
+(pgrep -f coffeed.sh) -> PID
+(kill -15) -> WARNING SIGTERM received, but I am brewing! Send SIGTERM again w│sem_2/software_development/ex_2$ pidof cooffeed.sh       │
+ithin 10 seconds to confirm.
+on confirm ->INFO final words: thank you for 5828 cups. Please descale me.
+
+would not happen on -9 because it immediatly kills the process, giving it no time to enter a shutdown routine.
+
+
+
+
