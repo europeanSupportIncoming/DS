@@ -1,0 +1,8 @@
+assumptions:
+revert HEAD --> stays same bc no order up
+reset --hard HEAD~1 --> goes back to 1st version
+restore --source=HEAD~1 fruit.txt --> restores to second version
+git stash --> stashes last commit
+git stash pop --> reappleis last stashed commit and empties stash
+
+
