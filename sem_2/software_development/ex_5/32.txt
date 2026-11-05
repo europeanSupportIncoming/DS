@@ -1,0 +1,28 @@
+download file to dir, then:
+
+import polars as pl
+import json
+
+with open("data.json") as f:
+	son.load(f)["nodes"]
+df = pl.DataFrame(list(nodes.values()), infer_schema_length=None)
+
+df. -> 3390 nodes
+df.filter(pl.col("isKeystone") == True ) -> 57
+
+df.filter(
+    (pl.col("isKeystone") == True) &
+    pl.col("stats").list.eval(pl.element().str.contains("Maximum Life")).list.any()
+).select(
+    'name',
+    pl.col("stats").list.join("\n").alias("stats_text"),
+) --> Chaos Inoculation
+
+
+df.group_by("ascendancyName").agg(
+    pl.col("name").n_unique().alias("node_count")
+).sort("node_count", descending=True) --> 38 for Ascendant
+
+
+df.explode("stats").group_by("stats").len().sort("len", descending=True)
+--> +10 Int with 72

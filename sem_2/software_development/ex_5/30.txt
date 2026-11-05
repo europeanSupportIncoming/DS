@@ -1,0 +1,29 @@
+python setup:
+import polars as pl
+URL = "https://raw.githubusercontent.com/allisonhorst/palmerpenguins/main/inst/extdata/penguins.csv"
+df = pl.read_csv(URL, null_values="NA")
+
+df.unique('species')
+
+adelie = df.filter(pl.col('species')=='Adelie')
+gentoo = df.filter(pl.col('species')=='Gentoo')
+chinstrap = df.filter(pl.col('species')=='Chinstrap')
+
+Now:
+df.unique('species') gives the names (adelie, gentoo, chinstrap)
+split into subsspecies via df.filter(pl.col('species')==species
+
+		adelie		gentoo		chinstrap
+sp.count()	152		124		68
+sp.mean()	3700		5076		3733
+df.max() (see below)
+┌─────────┬───────────┬────────────────┬───────────────┬───────────────┬─────────────┬──────┬──────┐
+│ species ┆ island    ┆ bill_length_mm ┆ bill_depth_mm ┆ flipper_lengt ┆ body_mass_g ┆ sex  ┆ year │
+│ ---     ┆ ---       ┆ ---            ┆ ---           ┆ h_mm          ┆ ---         ┆ ---  ┆ ---  │
+│ str     ┆ str       ┆ f64            ┆ f64           ┆ ---           ┆ i64         ┆ str  ┆ i64  │
+│         ┆           ┆                ┆               ┆ i64           ┆             ┆      ┆      │
+╞═════════╪═══════════╪════════════════╪═══════════════╪═══════════════╪═════════════╪══════╪══════╡
+│ Gentoo  ┆ Torgersen ┆ 59.6           ┆ 21.5          ┆ 231           ┆ 6300        ┆ male ┆ 2009 │
+└─────────┴───────────┴────────────────┴───────────────┴───────────────┴─────────────┴──────┴──────┘
+sp.unique('island') tor,bis,dre | bis | 	dream
+
