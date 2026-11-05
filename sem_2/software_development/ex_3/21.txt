@@ -5,4 +5,5 @@ restore --source=HEAD~1 fruit.txt --> restores to second version
 git stash --> stashes last commit
 git stash pop --> reappleis last stashed commit and empties stash
 
-
+save via: git reflog --> check hashes
+git branch rescued hash of commit

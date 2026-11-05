@@ -1,0 +1,2 @@
+see main.py for python script
+running via uv run fastapi dev main.py works

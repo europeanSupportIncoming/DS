@@ -1,0 +1,30 @@
+before:
+no commits yet, untracked files crew.txt
+after:
+changes to be committed new file: crew.txt
+
+git diff:
+   $diff --git a/crew.txt b/crew.txt
+
+│index 44d6baf..69d0d2d 100644
+│--- a/crew.txt
+│+++ b/crew.txt
+│@@ -1,4 +1,5 @@
+│ Dr.Honk
+│-Traitor mcTreasnaour
+│-Trustyson Believeseveryone
+│+Traitor mcTreasnaous: chief advisor
+│+Richard Moneysacks
+│+the wizard
+│ R. andomguy
+
+git add crew.txt -> git commit 
+
+git lg:
+* d76571d - (HEAD -> master, tag: v1.0)
+│+Richard Moneysacks                    │ added .gitignore %Xgreen(6 minutes ago
+│+the wizard                            │) [Paul K.]
+│ R. andomguy                           │* c4d481e - updated crew %Xgreen(10 min
+                                        │utes ago) [Paul K.]
+git add crew.txt -> git commit          │* 8289b53 - first crew draft %Xgreen(14
+                                        │ minutes ago) [Paul K.]

@@ -1,0 +1,23 @@
+git bisect does bisection search for specific change
+give it old and new commit, then it recursively asks for commit in mmiddle
+
+v1.0:
+ line 58, in main
+    destination = sys.argv[1]
+
+IndexError: list index out of range
+
+main:
+Navigation computer of the SS Probably Fine.
+
+
+110 commits between them
+
+
+"python3 doesn't check properly on my laptop but":
+commit 3da48acf339b014cd410d19a08e8e71fd7860e14 (HEAD)
+seems to have broken things.
+took about 8 steps (6 shown) because 2 were skipped and the closest power of 2 to the total #
+ of commits was 2^6
+
+Can't properly find the change commit, because v1.0 doesn't work for me.

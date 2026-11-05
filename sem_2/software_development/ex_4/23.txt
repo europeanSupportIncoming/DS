@@ -1,0 +1,41 @@
+branches:
+main
+reotes/origin HEAD and captain and dr-honk and main
+git lg --all: 7 weeks ago they diverged
+git cherry-pick 85c70e7 
+different hashes: bc they're not the same commit (different time stamps and applied to different branches)
+
+when rebasing it gives warning: skipping previously applied commit 85c...
+so it knows the commit was cherry picked and sees it's already here
+
+git needs merge commit because merge also changes branch internal stuff
+(just like adding/removing/changing files)
+
+trying merge:
+automatic merge failed, merge conflict in menu.md,
+fix conflicts then commit result
+
+zdiff showed in file where conflict was and which branches the diffs came from
+
+output:
+*   ba52232 - (HEAD) resolved conflict %Xgreen(64 seconds ago) [Paul K.]
+|\  
+| *   b128e61 - (main) Merge remote-tracking branch 'origin/captain' "because someone said so" %Xgreen(6 minutes ago) [Paul K.]
+| |\  
+| | * c857be5 - (origin/captain) feat(menu): make Monday dinner spicy %Xgreen(7 weeks ago) [Captain Vega]
+| | * 5e69e04 - feat(menu): pizza night on Fridays %Xgreen(7 weeks ago) [Captain Vega]
+* | | 7b9a5da - (origin/dr-honk) feat(menu): sunday treat for the ducks %Xgreen(7 weeks ago) [Dr. Honk]
+* | | 85c70e7 - fix(allergies): Lt. Byte is allergic to peanuts, not peas %Xgreen(7 weeks ago) [Dr. Honk]
+* | | 31e0cb8 - feat(menu): replace fish sticks by bread on Fridays %Xgreen(7 weeks ago) [Dr. Honk]
+| |/  
+|/|   
+| | * f8e3bff - (honk-rebased) feat(menu): sunday treat for the ducks %Xgreen(7 minutes ago) [Dr. Honk]
+| | * af9b606 - feat(menu): replace fish sticks by bread on Fridays %Xgreen(7 minutes ago) [Dr. Honk]
+| |/  
+| * 12ca97a - fix(allergies): Lt. Byte is allergic to peanuts, not peas %Xgreen(11 minutes ago) [Dr. Honk]
+| * ba352bb - (origin/main, origin/HEAD) docs: add galley opening hours %Xgreen(7 weeks ago) [Lt. Byte]
+|/  
+* 7ada503 - docs: add allergy list %Xgreen(7 weeks ago) [Dr. Honk]
+* 97a1b1f - feat: add weekly menu %Xgreen(7 weeks ago) [Lt. Byte]
+* 50e87b2 - docs: add galley readme %Xgreen(7 weeks ago) [Captain Vega]
+

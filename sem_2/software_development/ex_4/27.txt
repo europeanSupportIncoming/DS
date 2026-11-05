@@ -1,0 +1,24 @@
+uv init --package iss-tracker
+enter then git init
+git status is empty
+made: README.md pyproject.toml and src
+
+uv add "requests<2.32"
+then in toml:
+added dependencies = [
+	"requests<2.32",
+]
+
+
+uv tree:
+we get certifi, charset-normalizer, idna, urllib
+present because of dependencies in requests
+
+after uv add requests>=2.32:
+toml changed < -> >=
+uv.lock: same
+
+
+after deleting .venv:
+if just uv run src/iss-tracker -> error failed to spawn src/iss-tracker cause: permission denied (os error 13)
+if running specific file -> makes new venv

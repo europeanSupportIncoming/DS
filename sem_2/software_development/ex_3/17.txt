@@ -1,0 +1,13 @@
+lvl 0: git commit x2
+git checkout -b bugFix
+-"- then commmit, checkout main, commit, merge bugFix
+same then git rebase main
+git checkout C4 (deteach HEAD and attach to specified commit)
+git checkout HEAD^ (one up)
+
+git branch -f main C6/bugFix bugFix~3
+git checkout C1
+
+git reset local^/revert pushed^
+
+use reset for local repos (it changes the history) revert for shared (it makes a new commit)

@@ -1,0 +1,43 @@
+git clone
+enter dir
+3x rebase -i:
+
+git rebase -i ae8ef^
+change pick to edit, save and close
+then git rm .env
+git commit --amend  --no-edit
+git rebase --continue
+
+
+#cached so.env remains but isn't tracked
+#add it to .gitignore
+
+
+git rebase -i "oldest^"
+squash two below
+add new msg
+(after editing text save and close every time)
+
+git rebase -i 2a41313^
+skip empty
+git reset HEAD^ (uncommit current commit)
+git add -p math.py
+in patch: (s doesn't work, use e instead to delete division lines)
+then git commit -m 'multiplication'
+then git add -A, commit -m division
+continue rebase
+
+output:
+* b99d037 - (HEAD -> main) division %Xgreen(2 minutes ago) [Paul K.]
+* 4c87d99 - multiplication %Xgreen(2 minutes ago) [Paul K.]
+* c484d52 - fixed type hint in addition %Xgreen(2 minutes ago) [Benjamin Hackl]
+* 1204d4c - left comment, should be checked %Xgreen(2 minutes ago) [Benjamin Hackl]
+* 40c7c05 - subtraction %Xgreen(2 minutes ago) [Benjamin Hackl]
+* cd9be0f - addition %Xgreen(2 minutes ago) [Benjamin Hackl]
+* cd3e532 - updated readme.md %Xgreen(2 minutes ago) [Benjamin Hackl]
+* 2900f1d - initial commit, added readme %Xgreen(2 years, 1 month ago) [Benjamin Hackl]
+
+
+
+secret is truly gone (for git, we still have it locally but don't track)
+if I fully deleted it, I could find it with git reflog and making a sneakpeek branch that's based on the original mistaken commit.

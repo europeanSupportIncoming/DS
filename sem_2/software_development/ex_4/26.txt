@@ -1,0 +1,24 @@
+uv init
+uv add --dev ruff
+#either uv run ... but I do source .venv/bin/activate
+git init
+
+go to hooks, nano pre-commit
+#!/bin/bash or sth
+uv run ruff check
+uv run ruff format check
+
+only runs if chmod +700 for pre-commit
+
+checks/aborts by whatever ruff checks
+
+nano test.py
+write code
+git add
+git commit fails with: expected an indented block after fct def
+
+uv run ruff check --fix test.py && uv run ruff format test.py
+
+can skip with: git commit --no-verify
+hooks aren't part of project/not tracked by git bc they're client side
+deal with: run server side hooks (only as sysadmin)

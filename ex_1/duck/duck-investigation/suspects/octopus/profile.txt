@@ -1,6 +1,0 @@
-SUSPECT PROFILE
-
-Name: Ada the octopus
-Role: Parallel programming consultant
-Speciality: Eight simultaneous code reviews
-Current project: Reducing the number of meetings to seven

@@ -1,5 +1,0 @@
-STATEMENT: ADA
-
-All eight of my hands were occupied this morning.
-I was reviewing a pull request, making tea, and pointing at six diagrams.
-I would have requested a duck through the issue tracker.

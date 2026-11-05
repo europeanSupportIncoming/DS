@@ -1,0 +1,46 @@
+@ desktop: mkdir cargo-hold && cd cargo-hold && git init
+make text files
+git add .
+find git files: shows 2
+commit
+find again: shows 4
+$ git cat-file -t 2505b9c24a83c79137106c1f297c2760be2c8309
+ -t: tree
+-p: snacks.txt
+
+.t shows tree always (?) -p shows tree and type of entities in tree
+
+*note: in eg this is in dir 25/05b..., but for git cmd skip /
+
+change snacks/add/commit:
+predicted 2 new objects, got 4 new ones.
+Assume: only unchanged stuff was kept
+
+after renaming:
+2 new objects
+no new blob because: file name was changed via git only so no new content/nothing untracked
+
+
+cat .git/HEAD: ref refs/heads/master
+cat that:.git/refs/heads/master5498fdd1ef04f542a6e8ec63f777b311fdb05a50
+
+no changes after git branch spare
+changed dir for cat .git/HEAD
+we get .git/refs/heads/master or spare now
+both give same hash though
+
+after commit (after changes):
+spare has new hash
+
+
+
+
+###########################################exercise
+
+essentially, anything done in git creates new objects.
+
+
+
+
+
+

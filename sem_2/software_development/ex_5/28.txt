@@ -1,0 +1,3 @@
+first bug: find_patient returns non, fix: rewrote to return first name found
+second bug: argument to round has incompatible type float | str
+fix: def switch case to handle whether average returns float or string

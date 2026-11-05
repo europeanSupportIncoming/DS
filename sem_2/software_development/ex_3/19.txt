@@ -1,0 +1,21 @@
+--filter=blob:none
+only downloads pure file data (blobs) will only be downloaded on demand. 
+nice bc sympy is huge
+
+size: 60 M
+
+git log --online --follow sympy/abc.py | wc -l
+--> 36
+
+git log --follow --reverse --format='%an | %ad' --date=short -- sympy/abc.py | head -1 
+--> fredrik.johansson | 2007-10-05
+
+
+gt blame file | grep lamda
+-> last change by oscar benjamin at 2024-12-08
+
+git log --reverse -S"lamda" --format="%H | %an | %ad | %s"  --date=short sympy/abc.py | head -1
+--> 2011-10-11 Aaron Meurer
+added bc lambda is python def'd special thingy
+
+

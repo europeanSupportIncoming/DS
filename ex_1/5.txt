@@ -1,3 +1,0 @@
-download file into dir
-nano spaceship-manual.txt and make changes
-ctrl + S, ctrol + X
