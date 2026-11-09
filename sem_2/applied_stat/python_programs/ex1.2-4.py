@@ -25,9 +25,9 @@ sigma = np.cov(X.T, ddof=1)
 inv_sigma = np.linalg.inv(sigma)
 
 print(f'\n\nmu {mu} \n\n sigma {sigma}\n\n')
-# pd.plotting.scatter_matrix(mvnorm, diagonal='kde')
-# plt.show()
-# plt.savefig('scatter_raw_ex2.png')
+pd.plotting.scatter_matrix(mvnorm, diagonal='kde')
+plt.show()
+plt.savefig('scatter_raw_ex2.png')
 
 diff = X-mu
 d2 = np.einsum('ij,jk,ik->i', diff, inv_sigma, diff)
@@ -41,9 +41,9 @@ sigma_inv_sqrt = vecs @ np.diag(1 / np.sqrt(vals)) @ vecs.T
 
 Y = (X - mu) @ sigma_inv_sqrt.T
 Y_df = pd.DataFrame(Y, columns=['Y1', 'Y2', 'Y3'])
-# pd.plotting.scatter_matrix(Y_df, diagonal='kde')
-# plt.show()
-# plt.savefig('Yi_normalized_ex2.png')
+pd.plotting.scatter_matrix(Y_df, diagonal='kde')
+plt.show()
+plt.savefig('Yi_normalized_ex2.png')
 
 """
 In the previous exercise:
