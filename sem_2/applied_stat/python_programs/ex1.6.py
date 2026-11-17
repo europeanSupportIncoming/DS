@@ -35,17 +35,12 @@ n2 = len(X2)
 xax1  =np.linspace(0, n1, num=n1)
 xax2  =np.linspace(0, n2, num=n2)
 
-
-fig, ((ax1, ax4), (ax2, ax5), (ax3, ax6)) = plt.subplots(3, 2)
-fig.suptitle('left side: value 1, right side: value 2, scatter plots of each axis')
-ax1.scatter(xax1, X1.iloc[:, 1])
-ax2.scatter(xax1, X1.iloc[:, 2])
-ax3.scatter(xax1, X1.iloc[:, 3])
-ax4.scatter(xax2, X2.iloc[:, 1], c='orange')
-ax5.scatter(xax2, X2.iloc[:, 2], c='orange')
-ax6.scatter(xax2, X2.iloc[:, 3], c='orange')
-# plt.savefig('scatters_simple_two_sample.png')
-# plt.show()
+fig, axs = plt.subplots(3,3)
+axs[0, 1].scatter(X1.iloc[:, 1], X1.iloc[:, 2], c='green')
+axs[1, 0].scatter(X1.iloc[:, 1], X1.iloc[:, 2], c='green')
+axs[0, 1].scatter(X2.iloc[:, 1], X2.iloc[:, 2], c='red')
+axs[1, 0].scatter(X2.iloc[:, 1], X2.iloc[:, 2], c='red')
+#... and so on
 
 #unbiased pooled covariance
 Sp = ((n1 - 1) * np.cov(X1.iloc[:, 1:4].T) + (n2 - 1) * np.cov(X2.iloc[:, 1:4].T)) / (n1 + n2 - 2)

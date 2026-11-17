@@ -41,19 +41,21 @@ A=np.random.rand(2,2)
 sigma = A@A.T + 0.1*np.eye(2)
 
 print(f'sigma {sigma}')
+n_reps = 10000
+successes = np.zeros(n_reps)
+for repeat in range(n_reps):
+    for n in [10, 50]:
 
-for n in [10, 50]:
+        x = np.random.multivariate_normal(mu, sigma, size=n)
+        p=x.shape[1]
 
-    x = np.random.multivariate_normal(mu, sigma, size=n)
-    p=x.shape[1]
+        xbar = x.mean(axis=0)
+        s = np.cov(x.T)
+        s_inv = np.linalg.inv(s)
+        T2 = n*xbar@s_inv@xbar
 
-    xbar = x.mean(axis=0)
-    s = np.cov(x.T)
-    s_inv = np.linalg.inv(s)
-    T2 = n*xbar@s_inv@xbar
-
-    f_val=f.ppf(1-alpha, p, n-p)
-    t2_crit = (p*(n-1)/(n-p))*f_val
-    print(f' n={n}\ncritical t2 {t2_crit}\ncalculated t2 {T2}')
-
-
+        f_val=f.ppf(1-alpha, p, n-p)
+        t2_crit = (p*(n-1)/(n-p))*f_val
+        # print(f' n={n}\ncritical t2 {t2_crit}\ncalculated t2 {T2}')
+    successes[repeat] = T2 <= t2_crit
+print(np.sum(successes)/len(successes))
