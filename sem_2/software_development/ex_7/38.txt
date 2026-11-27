@@ -1,0 +1,142 @@
+with uv:
+
+stderr:
+         SetuptoolsWarning: `license` overwritten by `pyproject.toml`
+         SetuptoolsWarning: `extras_require` overwritten in `pyproject.toml`
+
+	...
+	Could not find gdal-config. Make sure you have installed the GDAL native library
+        	 and development headers.
+	...
+         FileNotFoundError: [Errno 2] No such file or directory: 'gdal-config'
+
+with pixi:
+#get via: curl -fsSL https://pixi.sh/install.sh | sh
+#exec bash
+#pixi init quakes && cd quakes
+#pixi add gdal polars
+
+list ones that aren't python:
+pixi list --json | jq -r '.[] | select(.kind != "pypi") | .name'
+
+openmp_mutex
+_python_abi3_support
+blosc
+bzip2
+c-ares
+ca-certificates
+cpython
+freexl
+gdal
+geos
+giflib
+icu
+json-c
+keyutils
+krb5
+ld_impl_linux-64
+lerc
+libarchive
+libblas
+libbrotlicommon
+libbrotlidec
+libbrotlienc
+libcblas
+libcurl
+libdeflate
+libedit
+libev
+libexpat
+libffi
+libgcc
+libgcc-ng
+libgdal-core
+libgfortran
+libgfortran5
+libgomp
+libhwy
+libiconv
+libjpeg-turbo
+libjxl
+libkml
+liblapack
+liblzma
+libmpdec
+libnghttp2
+libnsl
+libopenblas
+libpng
+libpsl
+librttopo
+libspatialite
+libsqlite
+libssh2
+libstdcxx
+libstdcxx-ng
+libtiff
+libuuid
+libwebp-base
+libxml2
+libxml2-16
+libxml2-devel
+libzlib
+lz4-c
+lzo
+minizip
+muparser
+ncurses
+numpy
+openssl
+pcre2
+polars
+polars-runtime-32
+proj
+python
+python-gil
+python_abi
+readline
+snappy
+sqlite
+tk
+tzdata
+uriparser
+xerces-c
+zlib
+zstd
+
+#pixi run ogrinfo -so -al quakes.geojso
+#pixi run ogr2ogr -f CSV quakes.csv quakes.geojson -lco GEOMETRY=AS_XY -select mag,place,time
+#pixi run python -c "import polars as pl; print(pl.read_csv('quakes.csv'))"
+
+2130 quakes
+#pixi run python -c "
+#import polars as pl
+#df = pl.read_csv('quakes.csv').sort('mag').select(['mag','place'])
+#df = df.with_columns(pl.col('place').str.split(',').list.last().alias('region'))
+#print(df)
+#"
+--> 8.8, Russia, 7.8 Russia, 7.7 Burma
+
+#pixi run python -c "
+#import polars as pl
+#df = pl.read_csv('quakes.csv').select('place')
+#df = df.with_columns(
+#    pl.col('place').str.split(',').list.last().str.strip_chars()
+#      .str.split(' ').list.first().alias('region')
+#)
+#print(df.group_by('region').len().sort('len', descending=True))
+#"
+most: Russia, 510
+2nd: Indonesia with 144
+
+#content of pixi.toml:
+
+getdata = "curl -o quakes.geojson https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2025-01-01&endtime=2026-01-01&minmagnitude=5"
+convert = { cmd = "ogr2ogr -f CSV quakes.csv quakes.geojson -lco GEOMETRY=AS_XY -select mag,place,time", depends-on = ["getdata"]}
+analyze = { cmd = "python analyze.py", depends-on = ["convert"] }
+
+made via pixi task add $name "task" --depends-on $dependency_task_name
+
+colleague on diff platform: pixi set up, proper python script for analyzing (alternatively, do all analyzing via single commands)
+and required init files for quakes
+

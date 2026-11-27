@@ -21,4 +21,6 @@ build-backend = "uv_build"
 [tool.uv.workspace]
 members = [
     "ex_5/ex_30",
+    "ex_7/nr_38",
+    "ex_7/40",
 ]

@@ -1,0 +1,15 @@
+[workspace]
+authors = ["Paul K <paul.kothgasser@gmail.com>"]
+channels = ['conda-forge']
+name = "quakes"
+platforms = ['linux-64']
+version = "0.1.0"
+
+[tasks]
+getdata = "curl -o quakes.geojson https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2025-01-01&endtime=2026-01-01&minmagnitude=5"
+convert = { cmd = "ogr2ogr -f CSV quakes.csv quakes.geojson -lco GEOMETRY=AS_XY -select mag,place,time", depends-on = ["getdata"]}
+analyze = { cmd = "python analyze.py", depends-on = ["convert"] }
+
+[dependencies]
+gdal = ">=3.13.3,<4"
+polars = ">=2.1.0,<3"
