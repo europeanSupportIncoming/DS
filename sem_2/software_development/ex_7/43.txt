@@ -1,0 +1,43 @@
+general statements:
+1) author makes changelist
+2) 1st round of code review
+3) end: reviewer approves changee
+
+problem: easy to come across as personal attack
++ write so others get what I mean
+
+idea: start reviewing immediately
+
+many small is better than one big changelist
+
+give examples of changes you suggest
+
+avoid "you", avoid commands
+
+no personal opinions
+
+only review directly affected code
+
+also praise, don't just critique
+
+• Which tasks should be left to machines (formatters, linters, CI) instead of reviewers, and why?
+Which of these tools have we already used in this course?
+
+--> formating, verification, auto tests, unused imports /vars
+web used git a bit, used auto testing as well, we discussed styl guides, 
+
+• Rewrite a blunt review comment of your choice (e.g. “This is wrong, use a dict.”) following
+Lynch’s suggestions.
+
+function overwrites old save data. fix.--> it appears, that the function saves to a path, which already contains a savefile.
+We should make sure we don't accidentally overwrite it, so we can compare data generated from different versions.
+
+• What should a reviewer do when the code under review is far from ready?
+
+--> just make it more functional in this round, then do more next round.
+Only hold back long if it's critical and fully broken
+
+• More and more code is written by AI agents. Does reviewing such code change anything
+about Lynch’s suggestions? Who is the “human” in the review then?
+
+--> In the ideal case not, beacuse there's still a person who is aware of the code and oversees the AI spew, ie. the prompter, who is responsible.
